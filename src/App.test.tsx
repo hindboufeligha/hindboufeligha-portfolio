@@ -6,6 +6,8 @@ describe('App', () => {
   it('renders the portfolio owner name', () => {
     render(<App />)
 
-    expect(screen.getByRole('heading', { name: /Hind Boufeligha/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Hind Boufeligha/i }),
+    ).toBeInTheDocument()
   })
 })
