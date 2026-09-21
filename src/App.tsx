@@ -1,23 +1,45 @@
+import Header from './components/layout/Header'
+import SiteLayout from './components/layout/SiteLayout'
+
 function App() {
   return (
-    <main className="min-h-screen bg-[var(--color-background)] text-[var(--color-foreground)]">
-      <div className="mx-auto flex min-h-screen max-w-[var(--content-width)] items-center justify-center px-6">
-        <div className="text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            Software Engineer · Research
-          </p>
+    <SiteLayout>
+      <div id="top">
+        <Header />
 
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Hind Boufeligha
-          </h1>
+        <main>
+          <section id="about" className="min-h-screen px-6 py-24">
+            <div className="mx-auto max-w-[var(--content-width)]">
+              <h1 className="text-4xl font-semibold">About</h1>
+            </div>
+          </section>
 
-          <p className="mt-4 max-w-xl text-[var(--color-muted)]">
-            MSc Computer Science graduate building reliable software and
-            exploring research-driven applications of computing.
-          </p>
-        </div>
+          <section id="projects" className="min-h-screen px-6 py-24">
+            <div className="mx-auto max-w-[var(--content-width)]">
+              <h2 className="text-4xl font-semibold">Projects</h2>
+            </div>
+          </section>
+
+          <section id="publications" className="min-h-screen px-6 py-24">
+            <div className="mx-auto max-w-[var(--content-width)]">
+              <h2 className="text-4xl font-semibold">Publications</h2>
+            </div>
+          </section>
+
+          <section id="skills" className="min-h-screen px-6 py-24">
+            <div className="mx-auto max-w-[var(--content-width)]">
+              <h2 className="text-4xl font-semibold">Skills</h2>
+            </div>
+          </section>
+
+          <section id="contact" className="min-h-screen px-6 py-24">
+            <div className="mx-auto max-w-[var(--content-width)]">
+              <h2 className="text-4xl font-semibold">Contact</h2>
+            </div>
+          </section>
+        </main>
       </div>
-    </main>
+    </SiteLayout>
   )
 }
 

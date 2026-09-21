@@ -3,11 +3,43 @@ import { describe, expect, it } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('renders the portfolio owner name', () => {
+  it('renders the main portfolio navigation', () => {
     render(<App />)
 
     expect(
-      screen.getByRole('heading', { name: /Hind Boufeligha/i }),
+      screen.getByRole('navigation', { name: 'Main navigation' }),
     ).toBeInTheDocument()
+
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
+      'href',
+      '#about',
+    )
+
+    expect(screen.getByRole('link', { name: 'Projects' })).toHaveAttribute(
+      'href',
+      '#projects',
+    )
+
+    expect(
+      screen.getByRole('link', { name: 'Publications' }),
+    ).toHaveAttribute('href', '#publications')
+
+    expect(screen.getByRole('link', { name: 'Skills' })).toHaveAttribute(
+      'href',
+      '#skills',
+    )
+
+    expect(screen.getByRole('link', { name: 'Contact' })).toHaveAttribute(
+      'href',
+      '#contact',
+    )
+  })
+
+  it('renders the portfolio home link', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('link', { name: 'Hind Boufeligha — home' }),
+    ).toHaveAttribute('href', '#top')
   })
 })
