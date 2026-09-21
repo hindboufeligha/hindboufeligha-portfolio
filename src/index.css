@@ -1,1 +1,80 @@
 @import 'tailwindcss';
+
+:root {
+  --color-background: #fcfafb;
+  --color-surface: #ffffff;
+  --color-foreground: #242126;
+  --color-muted: #6f6872;
+  --color-border: #e8e1e7;
+
+  --color-accent: #b76e8a;
+  --color-accent-soft: #f3e5eb;
+  --color-accent-foreground: #ffffff;
+
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  --content-width: 72rem;
+}
+
+[data-theme='dark'] {
+  --color-background: #171519;
+  --color-surface: #211e22;
+  --color-foreground: #f5f0f3;
+  --color-muted: #b8afb5;
+  --color-border: #383238;
+
+  --color-accent: #d18aa5;
+  --color-accent-soft: #392831;
+  --color-accent-foreground: #171519;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
