@@ -4,6 +4,12 @@ test('portfolio homepage loads', async ({ page }) => {
   await page.goto('/')
 
   await expect(
-    page.getByRole('heading', { name: /Hind Boufeligha/i }),
+    page.getByRole('navigation', { name: 'Main navigation' }),
   ).toBeVisible()
+
+  await expect(page.getByRole('link', { name: 'About' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Projects' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Publications' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Skills' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible()
 })
