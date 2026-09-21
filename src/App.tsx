@@ -2,6 +2,7 @@ import Header from './components/layout/Header'
 import SiteLayout from './components/layout/SiteLayout'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
+import Projects from './components/sections/Projects'
 
 function App() {
   return (
@@ -14,11 +15,7 @@ function App() {
 
           <About />
 
-          <section id="projects" className="min-h-screen px-6 py-24">
-            <div className="mx-auto max-w-[var(--content-width)]">
-              <h2 className="text-4xl font-semibold">Projects</h2>
-            </div>
-          </section>
+          <Projects />
 
           <section id="publications" className="min-h-screen px-6 py-24">
             <div className="mx-auto max-w-[var(--content-width)]">
